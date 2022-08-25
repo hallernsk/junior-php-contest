@@ -1,15 +1,15 @@
 <?php
 
-use App\Api;
+use App\api;
 use App\db\connection;
-use App\db\DB;
+use App\db\db;
 
 require 'vendor/autoload.php';
 
 $db = connection\createConnection();
 
-DB::getInstance()->setupConnection($db);
+db::getInstance()->setupConnection($db);
 
-$api = new Api();
+$api = new api();
 
 $api->connection();

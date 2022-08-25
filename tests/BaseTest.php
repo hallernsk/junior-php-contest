@@ -3,7 +3,7 @@
 namespace App\Tests;
 
 use App\db\connection;
-use App\db\DB;
+use App\db\db;
 use PHPUnit\Framework\TestCase;
 
 abstract class BaseTest extends TestCase
@@ -12,6 +12,6 @@ abstract class BaseTest extends TestCase
     {
         $db = connection\createConnection();
 
-        DB::getInstance()->setupConnection($db);
+        db::getInstance()->setupConnection($db);
     }
 }

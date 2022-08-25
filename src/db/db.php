@@ -2,11 +2,11 @@
 
 namespace App\db;
 
-class DB
+class db
 {
     private static $instance = null;
 
-    public static function getInstance(): DB
+    public static function getInstance(): db
     {
         if (!self::$instance) {
             self::$instance = new static();
